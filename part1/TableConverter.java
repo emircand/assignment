@@ -1,3 +1,4 @@
+package part1;
 public class TableConverter implements Converter {
     @Override
     public void convertToEntity(Table table, Invoice invoiceBox) {

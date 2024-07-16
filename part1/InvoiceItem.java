@@ -1,3 +1,4 @@
+package part1;
 public class InvoiceItem {
     private int goodId;
     private int quantity;

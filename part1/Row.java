@@ -1,3 +1,4 @@
+package part1;
 public class Row {
     private int orderId;
     private int goodId;

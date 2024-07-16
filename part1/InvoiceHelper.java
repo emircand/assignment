@@ -1,3 +1,4 @@
+package part1;
 public interface InvoiceHelper {
     // Üç siparişteki malların toplam tutarının çıktısı
     public void calculateTotalInvoiceAmount();

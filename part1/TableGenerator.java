@@ -1,3 +1,4 @@
+package part1;
 public abstract class TableGenerator {
     public static void generate (Table table) {
         table.addRow(new Row(1000,2000,12,100.51));

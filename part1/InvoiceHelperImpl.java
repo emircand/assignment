@@ -20,7 +20,7 @@ public class InvoiceHelperImpl implements InvoiceHelper {
                 totalAmount += item.getQuantity() * item.getUnitPrice();
             }
         }
-        System.out.println("Tüm siparişler toplam tutarı: " + totalAmount);
+        System.out.println("Tüm siparişler toplam tutarı: " + String.format("%.2f", totalAmount));
     }
     // Üç siparişteki bütün malların ortalama fiyatı
     public void calculateAverageOrderAmount(){
@@ -31,7 +31,7 @@ public class InvoiceHelperImpl implements InvoiceHelper {
                 totalAmount = item.getQuantity() * item.getUnitPrice();
             }
             averageAmount = totalAmount / invoice.getInvoiceBox().get(orderId).size();
-            System.out.println("Sipariş No: " + orderId + " bütün malların ortalama fiyatı " + averageAmount);
+            System.out.println("Sipariş No: " + orderId + " bütün malların ortalama fiyatı " + String.format("%.2f", averageAmount));
         }
     }
     // Üç siparişteki bütün malların tek tek mal bazlı ortalama fiyatı
@@ -48,7 +48,7 @@ public class InvoiceHelperImpl implements InvoiceHelper {
             double totalAmount = entry.getValue();
             int totalCount = totalCountPerGood.get(goodId);
             double averageAmount = totalAmount / totalCount;
-            System.out.println("Mal No: " + goodId + ", Ortalama fiyat: " + averageAmount);
+            System.out.println("Mal No: " + goodId + ", Ortalama fiyat: " + String.format("%.2f", averageAmount));
         }
     }
 
